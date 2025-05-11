@@ -1,0 +1,32 @@
+import { test, expect } from '@playwright/test';
+import { monitorApiCall } from '../utils/apiMonitor';
+
+test('test', async ({ page }) => {
+  const checkApi = await monitorApiCall(page, '/api/latest-tools');
+  await page.goto('https://s4e.io/free-security-tools');
+  await page.getByRole('paragraph').filter({ hasText: 'Top 38 Parameters XSS' }).click();
+  await page.goto('https://s4e.io/free-security-tools?scan_type=everyone');
+  await page.getByRole('paragraph').filter({ hasText: 'Keycloak Panel Detection' }).first().click();
+  await page.getByRole('button', { name: 'Go Back' }).click();
+  await page.getByRole('paragraph').filter({ hasText: /^Top 10 TCP Ports Scanner$/ }).click();
+  await page.locator('header').getByRole('link', { name: 'S4E Security For Everyone' }).click();
+  await page.getByText('Online Private Key Scanner').first().click();
+  await page.locator('section').filter({ hasText: 'RecommendedKeycloak Panel' }).getByRole('button').first().click();
+  await page.locator('section').filter({ hasText: 'Most usedTCP Top Port Service' }).getByRole('button').first().click();
+  await page.getByRole('paragraph').filter({ hasText: 'Email Harvester' }).click();
+  await page.goto('https://s4e.io/free-security-tools');
+  await page.locator('section').filter({ hasText: 'RecommendedKeycloak Panel' }).getByRole('button').first().click();
+  await page.locator('section').filter({ hasText: 'RecommendedKeycloak Panel' }).getByRole('button').nth(1).click();
+  await page.getByRole('paragraph').filter({ hasText: 'Online Generic SQL Injection' }).click();
+  await page.goto('https://s4e.io/free-security-tools');
+  await page.locator('.css-151jeqn > div > div:nth-child(6)').first().click();
+  await page.locator('.css-151jeqn > div > div:nth-child(5)').first().click();
+  await page.locator('section').filter({ hasText: 'RecommendedKeycloak Panel' }).getByLabel('Next').click();
+  await page.getByRole('paragraph').filter({ hasText: 'Burp Suite Rest API Server' }).click();
+  await page.goto('https://s4e.io/free-security-tools');
+  await page.locator('section').filter({ hasText: 'RecommendedKeycloak Panel' }).getByLabel('Next').click();
+  await page.locator('section').filter({ hasText: 'RecommendedKeycloak Panel' }).getByLabel('Next').click();
+  await page.locator('section').filter({ hasText: 'RecommendedKeycloak Panel' }).getByLabel('Next').click();
+  await page.getByRole('paragraph').filter({ hasText: 'SSL Sweet32 Vulnerability' }).click();
+  await page.goto('https://s4e.io/free-security-tools');
+});
