@@ -1,4 +1,4 @@
-NOT: Test senaryolarını text dosyası olarak hazırlarken detay kısımların üzerinden geçmedim. Görüşme gerçekleştiereceğimiz durumda test senaryolarında nasıl detaylardan bahsedilebileceği hakkında konuşmayı çok isterim. Vaktinizi ve emeğiniz ayırdığınız için çok teşekkür ederim. Sağlıklı günler dilerim.
+NOT: Diğer branchde projeyi bulabilirsiniz. Test senaryolarını text dosyası olarak hazırlarken detay kısımların üzerinden geçmedim. Görüşme gerçekleştiereceğimiz durumda test senaryolarında nasıl detaylardan bahsedilebileceği hakkında konuşmayı çok isterim. Vaktinizi değerli kılmak adına elimden geleni yaptığımı bilmenizi isterim. Vaktinizi ve emeğiniz ayırdığınız için çok teşekkür ederim. Sağlıklı günler dilerim.
 
 
 
